@@ -43,7 +43,7 @@ print(f"Correy:{correy_percent:.3f}% ({correy_votes})")
 print(f"Khan:{khan_percent:.3f}% ({khan_votes})")
 print(f"Li:{li_percent:.3f}% ({li_votes})")
 print(f"Winner: {StatsNew}")
-output = os.path.join("Resources","Election_results.txt")
+output = os.path.join("Analysis","Election_results.txt")
 with open(output,"w") as file:
     file.write(f"Election Stats")
     file.write("\n")

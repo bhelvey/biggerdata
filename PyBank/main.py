@@ -35,7 +35,7 @@ print(f"Average Monthly Change: ${round(sum(monthlyChange) / len(monthlyChange))
 print(f"Max Increase: {(totalMonths)[max_Month_i]} ${(max_monthly_change)}")
 print(f"Max Decrease: {(totalMonths)[max_Month_d]} ${(min_monthly_change)}")
 #output the data to a text file
-output = os.path.join('Resources','Finanicials.txt')
+output = os.path.join('Analysis','Finanicials.txt')
 with open (output, 'w') as file:
     file.write("Financial Analysis")
     file.write("\n")
