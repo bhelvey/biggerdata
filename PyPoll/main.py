@@ -3,7 +3,7 @@ import csv
 #filepath
 file_csv = os.path.join ( 'Resources',
                         'election_data.csv') 
-Total_votes = 0
+total_votes = 0
 otooley_votes = 0
 correy_votes = 0
 khan_votes = 0
@@ -15,7 +15,7 @@ with open (file_csv, 'r') as csvfile:
     #print (header)
     for row in csvreader:
 #adding the total votes based on rows
-        Total_votes += 1
+        total_votes += 1
         if row[2] == "O'Tooley":
             otooley_votes += 1
         elif row[2] == "Correy":
@@ -30,14 +30,14 @@ Stats = {"O'Tooley": otooley_votes,"Correy": correy_votes,
         "Khan": khan_votes,"Li": li_votes}
 #voteCount = F.values()
 StatsNew = [max(Stats, key=Stats.get)]
-otooley_percent = (otooley_votes / Total_votes) * 100
-correy_percent = (correy_votes / Total_votes) * 100
-khan_percent = (khan_votes / Total_votes) * 100
-li_percent = (li_votes / Total_votes) * 100
+otooley_percent = (otooley_votes / total_votes) * 100
+correy_percent = (correy_votes / total_votes) * 100
+khan_percent = (khan_votes / total_votes) * 100
+li_percent = (li_votes / total_votes) * 100
 #print statements
 print(f"Election Stats")
 print(f"======================")
-print(f"Total Number of Votes:{(Total_votes)}")
+print(f"Total Number of Votes:{(total_votes)}")
 print(f"O'Tooley:{otooley_percent:.3f}% ({otooley_votes})")
 print(f"Correy:{correy_percent:.3f}% ({correy_votes})")
 print(f"Khan:{khan_percent:.3f}% ({khan_votes})")
@@ -49,7 +49,7 @@ with open(output,"w") as file:
     file.write("\n")
     file.write(f"======================")
     file.write("\n")
-    file.write (f"Total Number of Votes:{(Total_votes)}")
+    file.write (f"Total Number of Votes:{(total_votes)}")
     file.write("\n")
     file.write(f"O'Tooley:{otooley_percent:.3f}% ({otooley_votes})")
     file.write("\n")
